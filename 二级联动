@@ -1,0 +1,17 @@
+今天做二级联动的时候发现，用原生的js怎么都选取不到select的option的内容。最后解决方法是用jquery可以解决
+
+获取select的option值及其文本
+在jQuery中选择select标签的方法有：
+$("#selectId") 和 $("select[name='selectName']")
+
+1.获取select选择的值,选择了select之后直接用val()：
+
+例如：$("#selectId").val()或者$("select[name='selectName']").val();
+
+2.获取select的文本值，选择了select之后，用find()：
+
+例如：$("#selectId").find("option:selected").text();或者$("select[name='selectName']").find("option:selected").text();
+
+3.获取select选中的索引
+
+例如：$("#selectId").get(0).selectedindex;
